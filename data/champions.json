@@ -1,0 +1,38 @@
+[
+  {
+    "id": "oracle_voss",
+    "name": "Oracle Voss",
+    "title": "Keeper of the First Clock",
+    "hp": 120,
+    "energy": 5,
+    "moves": [
+      { "id": "time_fracture",  "name": "Time Fracture",  "type": "Void",    "dmg": 22, "heal": 0,  "cost": 1, "desc": "Splinters the current protocol." },
+      { "id": "stasis_field",   "name": "Stasis Field",   "type": "Utility", "dmg": 0,  "heal": 18, "cost": 2, "desc": "Suspends incoming damage for one turn." },
+      { "id": "orbit_strike",   "name": "Orbit Strike",   "type": "Flame",   "dmg": 34, "heal": 0,  "cost": 3, "desc": "Channels orbital debris into a single hit." }
+    ]
+  },
+  {
+    "id": "signal_rei",
+    "name": "Signal Rei",
+    "title": "Daughter of Static",
+    "hp": 100,
+    "energy": 6,
+    "moves": [
+      { "id": "protocol_break", "name": "Protocol Break", "type": "Void",    "dmg": 38, "heal": 0,  "cost": 2, "desc": "Tears open the opponent's defense layer." },
+      { "id": "mars_veil",      "name": "Mars Veil",      "type": "Flame",   "dmg": 0,  "heal": 20, "cost": 1, "desc": "Wraps in crimson signal — restores vitality." },
+      { "id": "frequency_burn", "name": "Frequency Burn", "type": "Flame",   "dmg": 28, "heal": 0,  "cost": 2, "desc": "Broadcasts a destructive resonance wave." }
+    ]
+  },
+  {
+    "id": "aether_rose",
+    "name": "AetherRose",
+    "title": "Goddess of Mars — Final Champion",
+    "hp": 150,
+    "energy": 4,
+    "moves": [
+      { "id": "rose_singularity", "name": "Rose Singularity", "type": "Void",    "dmg": 50, "heal": 0,  "cost": 3, "desc": "Collapses all timelines into one decisive strike." },
+      { "id": "sigil_bloom",     "name": "Sigil Bloom",     "type": "Utility", "dmg": 0,  "heal": 30, "cost": 2, "desc": "Reads the sigils — restores a fragment of self." },
+      { "id": "crimson_decode",  "name": "Crimson Decode",  "type": "Flame",   "dmg": 32, "heal": 0,  "cost": 2, "desc": "Find the key. Read the sigils. Decode the protocol." }
+    ]
+  }
+]
