@@ -1,0 +1,61 @@
+[
+  {
+    "id": "flora_warden",
+    "name": "Flora Warden",
+    "region": "verdant_hollow",
+    "theme": "Forest guardian — patient, ancient, speaks through plants",
+    "sigil": "verdant_sigil",
+    "team": [
+      { "ghostline": "moss_sentinel", "level": 18, "abilities": ["moss_shield", "root_hold", "verdant_pulse", "spore_storm"] },
+      { "ghostline": "moss_seedling", "level": 15, "abilities": ["root_hold", "spore_mist"] }
+    ],
+    "battle_intro": "The forest has watched you arrive. It is not afraid.",
+    "battle_defeat": "You carry the memory now. It will grow.",
+    "sigil_unlock": ["ash_wisp evolution path", "Verdant Hollow restricted zones"]
+  },
+  {
+    "id": "storm_rider",
+    "name": "Storm Rider",
+    "region": "static_coast",
+    "theme": "Coastal drifter — lives on the water, communicates in frequencies",
+    "sigil": "static_sigil",
+    "team": [
+      { "ghostline": "storm_hound",  "level": 28, "abilities": ["lightning_fang", "charge_field", "thunder_rush", "static_pulse"] },
+      { "ghostline": "static_pup",   "level": 22, "abilities": ["static_pulse", "spark_nip"] },
+      { "ghostline": "tide_serpent", "level": 25, "abilities": ["tide_surge", "current_pull"] }
+    ],
+    "battle_intro": "The storm chose me. Now let's see what chose you.",
+    "battle_defeat": "The frequency changed. I felt it.",
+    "sigil_unlock": ["Storm Hound final evolution", "Static Coast deep islands"]
+  },
+  {
+    "id": "obsidian_knight",
+    "name": "Obsidian Knight",
+    "region": "obsidian_range",
+    "theme": "Volcanic mountain guardian — cold exterior, molten core",
+    "sigil": "ember_sigil",
+    "team": [
+      { "ghostline": "solar_phantom", "level": 38, "abilities": ["solar_flare", "corona_shield", "scorch_ring", "ember_burst"] },
+      { "ghostline": "ember_wisp",    "level": 32, "abilities": ["ember_burst", "fire_veil", "scorch_ring"] },
+      { "ghostline": "ash_wisp",      "level": 34, "abilities": ["void_flicker", "cinder_veil", "echo_drain"] }
+    ],
+    "battle_intro": "Everything that reaches this height burns or becomes stronger.",
+    "battle_defeat": "You have the mountain's memory now. Don't waste it.",
+    "sigil_unlock": ["Void Lantern evolution path", "Magma Sanctum inner chamber"]
+  },
+  {
+    "id": "neon_architect",
+    "name": "Neon Architect",
+    "region": "lumen_city",
+    "theme": "City designer — built the resonance towers, knows what's beneath them",
+    "sigil": "lumen_sigil",
+    "team": [
+      { "ghostline": "void_lantern", "level": 45, "abilities": ["null_beacon", "void_pulse", "lantern_call", "echo_drain"] },
+      { "ghostline": "lunar_moth",   "level": 42, "abilities": ["astral_blink", "phase_shift", "moonbeam", "dream_dust"] },
+      { "ghostline": "storm_hound",  "level": 40, "abilities": ["thunder_rush", "charge_field", "lightning_fang"] }
+    ],
+    "battle_intro": "The city runs on Ghostline resonance. Every signal here — I designed it.",
+    "battle_defeat": "Interesting. You've unlocked something the towers didn't predict.",
+    "sigil_unlock": ["Astral Basin access", "Resonance Vault full wing"]
+  }
+]

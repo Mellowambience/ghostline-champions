@@ -1,0 +1,67 @@
+[
+  {
+    "id": "verdant_hollow",
+    "name": "Verdant Hollow",
+    "theme": "Ancient forest",
+    "environment_type": "moss",
+    "resonance": 1.4,
+    "unlock_condition": "start",
+    "towns": ["mosshaven", "rootwell", "briarpass"],
+    "dungeon": "hollow_depths",
+    "champions": ["flora_warden"],
+    "ghostlines_available": ["wisp", "moss_seedling", "moss_sentinel", "lunar_moth"],
+    "lore": "The oldest region. Trees here remember the world before cities. Something sleeps beneath the roots."
+  },
+  {
+    "id": "static_coast",
+    "name": "Static Coast",
+    "theme": "Storm-covered islands",
+    "environment_type": "static",
+    "resonance": 1.6,
+    "unlock_condition": "sigil:flora_warden",
+    "towns": ["signal_port", "crackle_cove"],
+    "dungeon": "shipwreck_grid",
+    "champions": ["storm_rider"],
+    "ghostlines_available": ["static_pup", "storm_hound", "tide_serpent"],
+    "lore": "The storms here are intelligent. Sailors know not to name them."
+  },
+  {
+    "id": "obsidian_range",
+    "name": "Obsidian Range",
+    "theme": "Volcanic mountains",
+    "environment_type": "ember",
+    "resonance": 1.8,
+    "unlock_condition": "sigil:storm_rider",
+    "towns": ["ashgate", "forge_hollow"],
+    "dungeon": "magma_sanctum",
+    "champions": ["obsidian_knight"],
+    "ghostlines_available": ["ember_wisp", "solar_phantom", "ash_wisp"],
+    "lore": "The mountain remembers every eruption. Every creature here carries that memory in their body."
+  },
+  {
+    "id": "lumen_city",
+    "name": "Lumen City",
+    "theme": "Futuristic metropolis",
+    "environment_type": "spectral",
+    "resonance": 1.2,
+    "unlock_condition": "sigil:obsidian_knight",
+    "towns": ["lumen_core", "signal_market", "ghost_lab_district"],
+    "dungeon": "resonance_vault",
+    "champions": ["neon_architect"],
+    "ghostlines_available": ["void_lantern", "static_pup", "lunar_moth"],
+    "lore": "Built around the first confirmed Ghostline research site. The factions argue about what was found there."
+  },
+  {
+    "id": "astral_basin",
+    "name": "Astral Basin",
+    "theme": "Surreal endgame region",
+    "environment_type": "astral",
+    "resonance": 2.0,
+    "unlock_condition": "sigil:neon_architect",
+    "towns": [],
+    "dungeon": "echo_sanctum",
+    "champions": [],
+    "ghostlines_available": ["lunar_moth", "astral_herald", "void_lantern"],
+    "lore": "Reality is unstable here. The Ghostlines that live here don't have memories — they are memories."
+  }
+]

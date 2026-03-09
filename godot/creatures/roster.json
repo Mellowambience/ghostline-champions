@@ -1,0 +1,125 @@
+[
+  {
+    "id": "wisp",
+    "display_name": "Wisp",
+    "type": "Ember",
+    "theme": "formless fire spirit, pre-evolution",
+    "base_hp": 38, "base_attack": 12, "base_defense": 8,
+    "base_focus": 14, "base_speed": 16, "base_bond": 0,
+    "abilities": ["ember_flicker", "warm_pulse"],
+    "evolutions": [
+      { "into": "ember_wisp", "trigger": "level", "value": 16 },
+      { "into": "ash_wisp",   "trigger": "bond",  "value": 60 }
+    ],
+    "lore": "A formless ember that clings to warm places. It remembers being a flame."
+  },
+  {
+    "id": "ember_wisp",
+    "display_name": "Ember Wisp",
+    "type": "Ember",
+    "theme": "fire spirit, first evolution",
+    "base_hp": 55, "base_attack": 22, "base_defense": 14,
+    "base_focus": 20, "base_speed": 22, "base_bond": 0,
+    "abilities": ["ember_burst", "fire_veil", "warm_pulse", "scorch_ring"],
+    "evolutions": [
+      { "into": "solar_phantom", "trigger": "level", "value": 34 }
+    ],
+    "lore": "The memory of a bonfire that refused to die. It burns without fuel."
+  },
+  {
+    "id": "solar_phantom",
+    "display_name": "Solar Phantom",
+    "type": "Ember",
+    "theme": "fire spirit, final form",
+    "base_hp": 78, "base_attack": 38, "base_defense": 24,
+    "base_focus": 30, "base_speed": 34, "base_bond": 0,
+    "abilities": ["solar_flare", "ember_burst", "corona_shield", "scorch_ring"],
+    "evolutions": [],
+    "lore": "Born from the memory of a sun. It does not orbit anything anymore."
+  },
+  {
+    "id": "ash_wisp",
+    "display_name": "Ash Wisp",
+    "type": "Spectral",
+    "theme": "fire spirit, bond-path evolution",
+    "base_hp": 50, "base_attack": 18, "base_defense": 20,
+    "base_focus": 28, "base_speed": 18, "base_bond": 0,
+    "abilities": ["cinder_veil", "void_flicker", "warm_pulse", "echo_drain"],
+    "evolutions": [
+      { "into": "void_lantern", "trigger": "sigil", "value": 1 }
+    ],
+    "lore": "What remains when fire bonds too deeply with the void."
+  },
+  {
+    "id": "void_lantern",
+    "display_name": "Void Lantern",
+    "type": "Spectral",
+    "theme": "spectral fire, rare bond evolution",
+    "base_hp": 70, "base_attack": 28, "base_defense": 30,
+    "base_focus": 46, "base_speed": 24, "base_bond": 0,
+    "abilities": ["void_pulse", "lantern_call", "echo_drain", "null_beacon"],
+    "evolutions": [],
+    "lore": "A flame that learned to exist between moments. Rarely seen twice."
+  },
+  {
+    "id": "moss_seedling",
+    "display_name": "Moss Seedling",
+    "type": "Moss",
+    "theme": "forest guardian, early form",
+    "base_hp": 50, "base_attack": 10, "base_defense": 20,
+    "base_focus": 12, "base_speed": 8, "base_bond": 0,
+    "abilities": ["root_hold", "spore_mist"],
+    "evolutions": [
+      { "into": "moss_sentinel", "trigger": "level", "value": 18 }
+    ],
+    "lore": "A patch of ancient moss that learned to walk. It moves very slowly."
+  },
+  {
+    "id": "moss_sentinel",
+    "display_name": "Moss Sentinel",
+    "type": "Moss",
+    "theme": "forest guardian",
+    "base_hp": 80, "base_attack": 18, "base_defense": 36,
+    "base_focus": 18, "base_speed": 10, "base_bond": 0,
+    "abilities": ["moss_shield", "root_hold", "verdant_pulse", "spore_storm"],
+    "evolutions": [],
+    "lore": "The oldest memory of a forest. It has outlasted three civilizations."
+  },
+  {
+    "id": "static_pup",
+    "display_name": "Static Pup",
+    "type": "Static",
+    "theme": "electrical energy, early form",
+    "base_hp": 45, "base_attack": 18, "base_defense": 10,
+    "base_focus": 16, "base_speed": 26, "base_bond": 0,
+    "abilities": ["static_pulse", "spark_nip"],
+    "evolutions": [
+      { "into": "storm_hound", "trigger": "level", "value": 20 }
+    ],
+    "lore": "Born from a storm's static discharge. Restless. Always seeking."
+  },
+  {
+    "id": "storm_hound",
+    "display_name": "Storm Hound",
+    "type": "Static",
+    "theme": "electrical energy, evolved form",
+    "base_hp": 68, "base_attack": 34, "base_defense": 18,
+    "base_focus": 24, "base_speed": 40, "base_bond": 0,
+    "abilities": ["static_pulse", "lightning_fang", "charge_field", "thunder_rush"],
+    "evolutions": [],
+    "lore": "Runs faster than its own thunder. The storm follows it, not the other way."
+  },
+  {
+    "id": "lunar_moth",
+    "display_name": "Lunar Moth",
+    "type": "Astral",
+    "theme": "dream entity",
+    "base_hp": 60, "base_attack": 24, "base_defense": 16,
+    "base_focus": 38, "base_speed": 30, "base_bond": 0,
+    "abilities": ["astral_blink", "dream_dust", "moonbeam", "phase_shift"],
+    "evolutions": [
+      { "into": "astral_herald", "trigger": "environment", "value": "astral_basin" }
+    ],
+    "lore": "It exists slightly out of phase with everything. You see its echo more than its body."
+  }
+]
