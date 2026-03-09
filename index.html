@@ -55,13 +55,7 @@
     .gh-subtitle{ color: var(--gh-muted); font-size:.88rem; margin-top:4px; }
     .league-header { text-align:center; }
     .league-header h1 { font-size: clamp(1.2rem, 4vw, 1.8rem); }
-    .status-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      width: 100%;
-      max-width: 720px;
-    }
+    .status-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 720px; }
     .status-block { padding: 16px 20px; }
     .status-block .name { font-family: var(--gh-font-display); font-size:.95rem; color:#ffe7d5; }
     .status-block .title-line { font-size:.72rem; color: var(--gh-muted); margin-bottom:12px; }
@@ -82,7 +76,6 @@
     .move-type.Flame  { color:var(--gh-accent); }
     .move-type.Void   { color:#c3aaff; }
     .move-type.Utility{ color:var(--gh-good); }
-    .gh-pill { display:inline-flex; align-items:center; gap:6px; border:1px solid var(--gh-line); background:rgba(255,255,255,.04); border-radius:999px; padding:3px 10px; font-size:.72rem; }
     .gauntlet-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; font-size:.75rem; color:var(--gh-muted); }
     .gauntlet-pip { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.15); border:1px solid var(--gh-line); transition:background .3s; }
     .gauntlet-pip.done    { background:var(--gh-good); border-color:var(--gh-good); }
@@ -177,7 +170,7 @@ const CHAMPIONS = [
 ];
 
 const PLAYER = {
-  name:"Amara\u2234", title:"Void Exile",
+  name:"Amara∴", title:"Void Exile",
   hp:110, maxHp:110, energy:5, maxEnergy:5,
   moves:[
     { id:"sigil_strike",  name:"Sigil Strike",  type:"Void",   dmg:26, heal:0,  cost:1, desc:"A mark that cannot be unseen." },
@@ -271,19 +264,23 @@ function playerMove(move){
   setTimeout(()=>{
     const em=pickEnemyMove(e);
     let enemyMsg="";
-    if(em.heal>0){
+    if(!em){
+      enemyMsg=`${e.name} has no energy — the protocol stalls.`;
+    } else if(em.id==="stasis_field"){
+      // Shield check must come before heal>0 — stasis_field has heal>0 but its
+      // primary effect is defensive, not restorative.
+      state.enemyShield=true;
+      enemyMsg=`${e.name} used ${em.name} — defense fortified.`;
+    } else if(em.heal>0){
       const actual=Math.min(em.heal,e.maxHp-e.hp);
       e.hp=Math.min(e.maxHp,e.hp+em.heal);
       enemyMsg=`${e.name} used ${em.name} — restored ${actual} HP.`;
-    } else if(em.id==="stasis_field"){
-      state.enemyShield=true;
-      enemyMsg=`${e.name} used ${em.name} — defense fortified.`;
     } else {
       const dmg=state.playerShield?Math.floor(em.dmg*.4):em.dmg;
       p.hp-=dmg; state.playerShield=false;
       enemyMsg=`${e.name} used ${em.name} — dealt ${dmg} damage to you.`;
     }
-    e.energy=Math.max(0,e.energy-em.cost);
+    if(em) e.energy=Math.max(0,e.energy-em.cost);
     updateBars();
     log(`${playerMsg}\n${enemyMsg}`);
     p.energy=Math.min(p.maxEnergy,p.energy+1);
@@ -296,8 +293,9 @@ function playerMove(move){
 
 function pickEnemyMove(e){
   const aff=e.moves.filter(m=>e.energy>=m.cost);
-  if(!aff.length) return e.moves[0];
-  const heals=aff.filter(m=>m.heal>0);
+  if(!aff.length) return null; // can't afford anything — skip turn
+  // Prefer heal if below 40% HP; exclude stasis_field from heal candidates
+  const heals=aff.filter(m=>m.heal>0&&m.id!=="stasis_field");
   if(heals.length&&e.hp<e.maxHp*.4) return heals[0];
   return aff[Math.floor(Math.random()*aff.length)];
 }
